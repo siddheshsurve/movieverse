@@ -29,7 +29,7 @@ const AddMovie = () => {
                       id="name"
                       name="name"
                       value={form.title}
-                      
+                      onChange={(e) => setForm({...form, title: e.target.value})}
                       class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
@@ -43,6 +43,8 @@ const AddMovie = () => {
                       type="email"
                       id="email"
                       name="email"
+                      value={form.year}
+                      onChange={(e) => setForm({...form, year: e.target.value})}
                       class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
@@ -58,6 +60,8 @@ const AddMovie = () => {
                     <textarea
                       id="message"
                       name="message"
+                      value={form.description}
+                      onChange={(e) => setForm({...form, description: e.target.value})}
                       class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                     ></textarea>
                   </div>
