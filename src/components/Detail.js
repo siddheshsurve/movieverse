@@ -12,7 +12,9 @@ const Detail = () => {
     title: "",
     year: "",
     image: "",
-    description: ""
+    description: "",
+    rating : 0,
+    rated : 0
   })
   
   const[loading, setLoading] = useState(false);
@@ -36,9 +38,9 @@ const Detail = () => {
           <img className="h-96 block md:sticky top-24" src={data.image} alt="" />
           <div className="md:ml-4 ml-0 w-full md:w-1/2">
             <h1 className='text-3xl font-bold text-gray-400'>{data.title} <span className='text-xl'>({data.year})</span></h1>
-            <ReactStars size={20} half={true} value={5} edit={false} />
+            <ReactStars size={20} half={true} value={data.rating/data.rated} edit={false} />
             <p className='mt-2'>{data.description}</p>
-            <Reviews />
+            <Reviews id={id} prevRating={data.rating} userRated={data.rated} />
           </div>
       </>
     }
