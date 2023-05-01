@@ -34,10 +34,10 @@ const Cards = () => {
             return (
               <Link to={`/detail/${e.id}`}><div
                 key={i}
-                className="card font-medium shadow-lg p-2 hover:-translate-y-3 cursor-pointer mt-6 transition-all duration-500"
+                className="flex flex-col card font-medium shadow-lg p-2 hover:-translate-y-3 cursor-pointer mt-6 gap-1 transition-all duration-500"
               >
-                <img className="h-60 md:h-72" src={e.image} alt="" />
-                <h1>
+                <img className="h-80 md:h-72" src={e.image} alt="" />
+                <h1 className="heading" >
                   <span className="text-gray-500">Name : </span>
                   {e.title}
                 </h1>
